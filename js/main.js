@@ -17,13 +17,22 @@ for (let i = 0; i < images.length; i++){
     item.append(img);
     itemsRef.append(item);
 }
+
 let active = 0;
 const prev = document.querySelector(".prev");
 prev.addEventListener("click", function(){
-    if(active = active + 1){
+    
+   for(let active = 0; active < images.length; active++){
+    const item = document.createElement("div");
+    item.classList.add("item");
+    if(active === 0){
         item.classList.remove("active");
-    }
-    else if(i === 1){
+    }else if(active === 1){
         item.classList.add("active");
     }
-});
+    const img = document.createElement("img");
+    img.setAttribute("src", images[active]);
+    item.append(img);
+    itemsRef.append(item);
+}
+})
