@@ -1,0 +1,44 @@
+/* reset */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* container */
+.container{
+    width: 900px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.items{
+    position: relative;
+    height: 300px;
+    width: 700px;
+}
+.prev{
+    position: absolute;
+    left: 50%;
+    z-index: 999;
+}
+.next{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 999;
+}
+.item{
+    position: relative;
+    display: none;
+    height: 100%;
+}
+.active{
+    display: block;
+}
+.item img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
